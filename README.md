@@ -33,7 +33,7 @@ The following command will configure the local kubectl to connect to the eks clu
 aws eks --region us-east-2 update-kubeconfig --name  my-cluster
 ```
 
-### If we need to uninstalling EKS :
+### If we need to uninstall EKS :
 
 ```
 terraform destroy
