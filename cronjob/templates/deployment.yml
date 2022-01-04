@@ -41,7 +41,7 @@ spec:
                   tar -czvf redis-backup-${now}.tar.gz -C /tmp dump.rdb appendonly.aof
                   aws --version
                   aws s3 cp redis-backup-${now}.tar.gz s3://{{ .Values.bucketName }}/
-              ;
+              
               resources:
                 requests:
                   cpu: 31m
