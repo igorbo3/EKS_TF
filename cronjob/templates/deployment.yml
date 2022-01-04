@@ -54,8 +54,8 @@ spec:
                   mountPath: /tmp
                 - name: {{ .Release.Name }}-aws-configmap
                   mountPath: /root/.aws/
-            #    - name: backup-folder
-            #      mountPath: /backup
+                - name: backup-folder
+                  mountPath: /backup
           restartPolicy: OnFailure  # restart policy: Always, OnFailure
           volumes:
             - name: backup-volume
@@ -64,7 +64,7 @@ spec:
             - configMap:
                 name: {{ .Release.Name }}-aws-configmap
               name: {{ .Release.Name }}-aws-configmap
- #           - name: backup-folder
- #             persistentVolumeClaim:
- #                 claimName: {{ .Release.Name }}-pvc
+            - name: backup-folder
+              persistentVolumeClaim:
+                  claimName: {{ .Release.Name }}-pvc
   
