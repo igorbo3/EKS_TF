@@ -1,8 +1,4 @@
-# EKS_TF
-
 # EKS deployment:
-
-
 
 ## Config aws-cli:
 
